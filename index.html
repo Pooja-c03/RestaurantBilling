@@ -37,3 +37,16 @@
             </div>
         </form>
     </div>
+    <script>
+        function calculateTotal() {
+            const prices = [5, 10, 2, 7, 3];
+            let total = 0;
+            for (let i = 0; i < prices.length; i++) {
+                const quantity = document.getElementById(`item${i + 1}`).value;
+                total += prices[i] * quantity;
+            }
+            document.getElementById('total').innerText = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
